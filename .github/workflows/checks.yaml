@@ -19,7 +19,7 @@ on:
 
 jobs:
   lint:
-    runs-on: flex-deploy
+    runs-on: ubuntu-latest
     permissions:
       checks: write
       contents: write
@@ -65,7 +65,7 @@ jobs:
             ${{steps.annotate.outputs.summary}}
             :white_check_mark: No issues found!
   test-plugin-v2:
-    runs-on: flex-deploy
+    runs-on: ubuntu-latest
     env:
       PLUGIN_FOLDER: plugin-flex-ts-template-v2
     steps:
